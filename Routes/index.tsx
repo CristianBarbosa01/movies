@@ -6,6 +6,7 @@ export function RootLayoutNav() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
+        <Stack.Screen name="(login)" redirect={false} options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" redirect={false} options={{ headerShown: false }} />
       </Stack>
     </ThemeProvider>

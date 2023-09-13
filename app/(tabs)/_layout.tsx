@@ -22,16 +22,6 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="home"
-        redirect={true}
-        options={{
-          title: "Home",
-          tabBarItemStyle:{
-            display:'none'
-          }
-        }}
-      />
-      <Tabs.Screen
         name="index"
         options={{
           title: "Tab One",

@@ -1,13 +1,29 @@
 import { StyleSheet } from 'react-native';
 import { Text, View } from '../../components/Themed';
-import Carrossel from '../../components/Carrossel';
+import Carousel from '../../components/Carousel';
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default function TabOneScreen() {
+
+  const carousel = [1, 2, 3];
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Movie</Text>
       <View>
-        <Carrossel />
+        <Text style={styles.title}>Movies</Text>
+      </View>
+      <View style={styles.carousel}>
+        <ScrollView>
+          {
+            carousel.map((item) => {
+              return (
+                <View key={item}>
+                  <Carousel />
+                </View>
+              )
+            })
+          }
+        </ScrollView>
       </View>
     </View>
   );
@@ -15,17 +31,17 @@ export default function TabOneScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     padding: 10,
-    marginTop: 30,
+    height: '100%',
   },
   title: {
     fontSize: 25,
     fontWeight: 'bold',
+    marginTop: '10%',
+    marginBottom: 20
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+  carousel: {
+    height: '92%',
+  }
 });

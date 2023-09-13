@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Colors from "../../constants/Colors";
 
 export const styles = StyleSheet.create({
   titleContainer: {
@@ -11,10 +12,6 @@ export const styles = StyleSheet.create({
     color: '#fff'
   },
   viewAll: {
-     color: '#fff' 
+     color: Colors.light.tint 
   },
-  carousel: {
-    flexDirection: 'row',
-    width: '100%',
-  }
 });
